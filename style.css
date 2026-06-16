@@ -25,19 +25,17 @@ body {
     height: 150px;
     width: 100%;
     background-color: rgb(255, 128, 0);
+    animation: upperor 1s ease-in infinite;
 }
 
 .circule{
-    border-radius: 50%;
-    border: 1px solid black;
     height: 200px;
     width: 200px;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    rotate: calc(1);
+    animation: circuleer 1s ease-in infinite;
 }
 .lower {
     height: 150px;
@@ -46,8 +44,12 @@ body {
     display: flex;
     position: absolute;
     bottom: 0px;
+    animation: loweror 1s ease-in infinite;
 }
-
+.mahatma{
+    height:150px;
+    animation: mahatmaAni 5s ease-in infinite;
+}
 
 @keyframes overley {
     0% {
@@ -60,5 +62,57 @@ body {
 
     100% {
         background-color: rgb(0, 255, 38);
+    }
+}
+@keyframes upperor {
+    0% {
+        transform: translateY(-100px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+@keyframes loweror {
+    0% {
+        transform: translateY(100px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+}
+@keyframes mahatmaAni {
+    0% {
+        transform: translatex(0px);
+    }
+    49%{
+        transform: translatex(100vw) rotateY(0deg);
+    }
+    50%{
+        transform: translatex(100vw) rotateY(180deg);
+    }
+    99% {
+        transform: translatex(0px) rotateY(180deg);
+    }
+    100% {
+        transform: translatex(0px);
+    }
+}
+@keyframes circuleer {
+    0% {
+        transform: translate(-50%, -50%) scale(.5);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(.5);
     }
 }
