@@ -15,10 +15,20 @@ body {
 .overlay {
     position: fixed;
     inset: 0;
-    opacity: 0.3;
+    opacity: 0.9;
     z-index: 100;
     pointer-events: none;
     animation: overley 1s ease-in infinite;
+}
+.background{
+    background-image: url(indo.png);
+    background-size: cover;
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    z-index: -100;
+    pointer-events: none;
+    height: 100%;
 }
 
 .upper {
@@ -26,6 +36,19 @@ body {
     width: 100%;
     background-color: rgb(255, 128, 0);
     animation: upperor 1s ease-in infinite;
+}
+.topimg{
+   position: fixed;
+    inset: 0;
+    opacity: 1;
+    z-index: 5;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+
+
+    /* animation: overley 1s ease-in infinite; */
+
 }
 
 .circule{
@@ -49,6 +72,18 @@ body {
 .mahatma{
     height:150px;
     animation: mahatmaAni 5s ease-in infinite;
+}
+.subs{
+    height:150px;
+    animation: mahatmaAni 5s ease-in infinite;
+}
+.img4{
+    height:150px;
+    animation: 5s ease-in infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes overley {
@@ -114,5 +149,22 @@ body {
 
     100% {
         transform: translate(-50%, -50%) scale(.5);
+    }
+}
+@keyframes subhasAni {
+    0% {
+        transform: translatex(0px);
+    }
+    49%{
+        transform: translatex(100vw) rotateY(0deg);
+    }
+    50%{
+        transform: translatex(100vw) rotateY(180deg);
+    }
+    99% {
+        transform: translatex(0px) rotateY(180deg);
+    }
+    100% {
+        transform: translatex(0px);
     }
 }
